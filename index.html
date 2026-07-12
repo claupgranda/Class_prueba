@@ -214,6 +214,38 @@
   @media(max-width:800px){.phases{grid-template-columns:1fr 1fr;row-gap:44px;}.phases::before{display:none;}}
   @media(max-width:500px){.phases{grid-template-columns:1fr;}}
 
+  /* ---------- EQUIPO ---------- */
+  .equipo-bg{background:var(--bg-panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .equipo-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:64px;align-items:center;}
+  .equipo-photo{position:relative;}
+  .equipo-photo-frame{
+    position:relative;border:1px solid var(--line);border-radius:4px;
+    padding:14px;background:var(--bg-deep);
+  }
+  .equipo-photo-frame img{
+    width:100%;display:block;border-radius:2px;
+    filter:grayscale(.15) contrast(1.05);
+  }
+  .equipo-photo-frame::before{
+    content:"";position:absolute;inset:-1px;border-radius:4px;
+    background:linear-gradient(140deg,var(--ignition),transparent 35%,transparent 65%,var(--thruster));
+    opacity:.5;z-index:-1;
+  }
+  .equipo-tag{
+    position:absolute;bottom:-16px;left:24px;
+    background:var(--bg-deep);border:1px solid var(--line);
+    padding:10px 16px;font-family:'JetBrains Mono',monospace;font-size:.72rem;
+    color:var(--thruster);letter-spacing:.08em;
+  }
+  .equipo-copy p{color:var(--text-muted);line-height:1.75;margin-bottom:18px;font-size:1rem;}
+  .equipo-copy strong{color:var(--text-white);}
+  .equipo-role{
+    font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--ignition-soft);
+    letter-spacing:.05em;margin-top:6px;display:block;
+  }
+  .equipo-name{font-size:1.5rem;margin-top:18px;}
+  @media(max-width:860px){.equipo-grid{grid-template-columns:1fr;}.equipo-photo-frame{max-width:340px;margin:0 auto;}}
+
   /* ---------- NOSOTROS ---------- */
   .nosotros-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;}
   .radar{position:relative;aspect-ratio:1/1;max-width:380px;}
@@ -282,6 +314,7 @@
     <div class="nav-links">
       <a href="#servicios">Servicios</a>
       <a href="#proceso">Proceso</a>
+      <a href="#equipo">Equipo</a>
       <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </div>
@@ -421,6 +454,25 @@
         <h4>Aterrizaje</h4>
         <p>Consolidamos resultados y dejamos capacidad instalada en tu equipo.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section id="equipo" class="equipo-bg section-pad">
+  <div class="container equipo-grid">
+    <div class="equipo-photo reveal">
+      <div class="equipo-photo-frame">
+        <img src="equipo-rocket-sa.jpeg" alt="Miembro del equipo de Rocket SA">
+      </div>
+      <div class="equipo-tag">CREW · 01</div>
+    </div>
+    <div class="equipo-copy reveal">
+      <div class="eyebrow">NUESTRO EQUIPO</div>
+      <h2 class="equipo-name">Al mando de tu misión</h2>
+      <span class="equipo-role">CONSULTORA · ESTRATEGIA & CRECIMIENTO</span>
+      <p style="margin-top:22px;">Detrás de cada estrategia de Rocket SA hay personas que se involucran de verdad con tu negocio, no un equipo genérico.</p>
+      <p>Combinamos <strong>visión comercial, creatividad y dominio técnico de IA</strong> para acompañarte desde el diagnóstico hasta los resultados.</p>
     </div>
   </div>
 </section>
